@@ -1,0 +1,26 @@
+PEOPLE
+
+Markus Mårtensson
+http://www.acc.umu.se/~mortis/
+@mmartensson
+
+_______________________________________________________________________________
+
+TECHNOLOGY
+
+Yeoman
+http://yeoman.io/
+
+Bower
+http://bower.io/
+
+Grunt
+http://gruntjs.com/
+
+_______________________________________________________________________________
+
+GRAPHIC ASSETS
+
+Fonts:
+
+Images:

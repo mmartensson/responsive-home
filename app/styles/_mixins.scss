@@ -1,0 +1,49 @@
+@mixin border-radius ($values) {
+  -moz-border-radius: $values;
+  -webkit-border-radius: $values;
+  border-radius: $values;
+}
+
+@mixin box-shadow ($x, $y, $offset, $hex) {
+  -moz-box-shadow: $x $y $offset $hex;
+  -o-box-shadow: $x $y $offset $hex;
+  -webkit-box-shadow: $x $y $offset $hex;
+  box-shadow: $x $y $offset $hex;
+}
+
+@mixin box-shadow-spread ($x, $y, $offset, $spread, $hex) {
+  -moz-box-shadow: $x $y $offset $spread $hex;
+  -o-box-shadow: $x $y $offset $spread $hex;
+  -webkit-box-shadow: $x $y $offset $spread $hex;
+  box-shadow: $x $y $offset $spread $hex;
+}
+
+@mixin box-shadow-inset ($x, $y, $offset, $hex) {
+  -moz-box-shadow: inset $x $y $offset $hex;
+  -o-box-shadow: inset $x $y $offset $hex;
+  -webkit-box-shadow: inset $x $y $offset $hex;
+  box-shadow: inset $x $y $offset $hex;
+}
+
+@mixin box-shadow-free ($string) {
+  -moz-box-shadow: unquote($string);
+  -o-box-shadow: unquote($string);
+  -webkit-box-shadow: unquote($string);
+  box-shadow: unquote($string);
+}
+
+@mixin transform-rotate ($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform:    rotate($deg);
+  -ms-transform:     rotate($deg);
+  -o-transform:      rotate($deg);
+  transform:         rotate($deg);
+}
+
+@mixin transform-translate ($x,$y) {
+  -webkit-transform: translate($x,$y);
+  -moz-transform:    translate($x,$y);
+  -ms-transform:     translate($x,$y);
+  -o-transform:      translate($x,$y);
+  transform:         translate($x,$y);
+}
