@@ -92,10 +92,7 @@ module.exports = function (grunt) {
         },
         assemble: {
             options: {
-                /* Renamed partials to partialsWorkaround in node_modules/assemble/tasks/assemble.js
-                 * since "partials" became cleared for some unknown reason.
-                 */
-                partialsWorkaround: '<%= yeoman.app %>/partials/*.hbs',
+                partials: '<%= yeoman.app %>/partials/*.hbs',
                 layout: '<%= yeoman.app %>/layouts/default.hbs',
                 flatten: true
             },
@@ -220,10 +217,6 @@ module.exports = function (grunt) {
             }
 
         },
-        bower: {
-            rjsConfig: 'app/scripts/main.js',
-            indent: '    '
-        },
         svgmin: {
             options: {
                 plugins: [{
@@ -238,10 +231,6 @@ module.exports = function (grunt) {
             }
         }
     });
-
-    grunt.renameTask('regarde', 'watch');
-    // remove when mincss task is renamed
-    grunt.renameTask('mincss', 'cssmin');
 
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {
