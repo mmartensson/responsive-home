@@ -1,8 +1,7 @@
-@import 'normalize-scss/normalize';
-@import 'font-awesome/scss/font-awesome.scss';
+@import '../components/normalize-scss/normalize';
+@import '../components/font-awesome/scss/font-awesome.scss';
 
 @import 'mixins.scss';
-@import 'compass/utilities/general/clearfix';
 
 $tablet-min: 768px;
 $desktop-min: 980px;

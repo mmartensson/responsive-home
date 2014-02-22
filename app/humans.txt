@@ -14,13 +14,23 @@ http://yeoman.io/
 Bower
 http://bower.io/
 
-Grunt
-http://gruntjs.com/
+Gulp
+http://gulpjs.com/
 
+Handlebars
+http://handlebarsjs.com/
+
+Browserify
+http://browserify.org/
+
+Sass
+http://sass-lang.com/
+
+Miscellaneous Libraries
+(see package.json and bower.json)
 _______________________________________________________________________________
 
 GRAPHIC ASSETS
 
 Fonts:
-
-Images:
+http://fortawesome.github.io/Font-Awesome/

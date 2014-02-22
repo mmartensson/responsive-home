@@ -47,3 +47,8 @@
   -o-transform:      translate($x,$y);
   transform:         translate($x,$y);
 }
+
+@mixin clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}

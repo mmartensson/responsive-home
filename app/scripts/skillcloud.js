@@ -1,4 +1,9 @@
 'use strict';
+
+var bonzo = require('../components/bonzo/bonzo.js');
+var qwery = require('../components/qwery/qwery.js');
+var bean  = require('../components/bean/bean.js');
+
 function $(selector) {
   return bonzo(qwery(selector));
 }
