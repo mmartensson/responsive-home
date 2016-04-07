@@ -50,7 +50,7 @@ gulp.task('scripts', [ 'modernizr' ], function() {
 
 gulp.task('styles', function() {  
     gulp.src('app/styles/*.scss')
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
 	.pipe(minifyCss())
         .pipe(gulp.dest('dist/styles'))
         .pipe(refresh(server))

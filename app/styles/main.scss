@@ -1,4 +1,4 @@
-@import '../components/normalize-scss/normalize';
+@import '../components/normalize-scss/normalize.scss';
 @import '../components/font-awesome/scss/font-awesome.scss';
 
 @import 'mixins.scss';
@@ -80,6 +80,13 @@ html, body {
   @include desktop {
     font-size: 16pt;
   }
+
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures, contextual;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "alt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
 h1, h2, h3 {
@@ -109,7 +116,7 @@ h1, h2, h3 {
   }
 }
 
-.hidden {
+[aria-hidden="true"] {
   display: none !important;
 }
 
@@ -416,4 +423,3 @@ footer {
   text-align: center;
   a { color: white; text-decoration: none; }
 }
-

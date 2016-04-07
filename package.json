@@ -13,7 +13,7 @@
     "gulp-footer": "~1.0.4",
     "gulp-browserify": "~0.4.6",
     "gulp-concat": "~2.1.7",
-    "gulp-sass": "~0.7.0",
+    "gulp-sass": "~2.2.0",
     "gulp-imagemin": "~0.1.5",
     "gulp-svgmin": "~0.4.3",
     "gulp-changed": "~0.2.1",
