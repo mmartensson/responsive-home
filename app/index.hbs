@@ -291,14 +291,19 @@ skills:
         <h2>Skills</h2>
       </header>
 
+      {{#* inline "skill"}}
+        <a href="http://en.wikipedia.org/wiki/{{wiki}}" class="p-skill">{{text}}</a>
+      {{/inline}}
+
       <p>Fluent in {{>skill languages.swedish}} (native) and {{>skill languages.english}}.
       Understands {{>skill languages.norweigian}} and {{>skill languages.danish}}.
       Basic skills in {{>skill languages.german}}.
 
-      <div id="skillcloud">
+      <div id="skillcloud" itemscope itemtype="http://schema.org/ItemList" aria-labelledby="skillcloud-label">
+      <span id="skillcloud-label" class="hidden" itemprop="name">Skillcloud</span>
       {{#eachProperty skills}}
         <a href="http://en.wikipedia.org/wiki/{{value.wiki}}"
-            data-skill="{{key}}"
+            data-skill="{{key}}" itemprop="itemListElement"
             {{#if value.desc}} title="{{value.desc}}" {{/if}}
             class="{{value.comp}} p-skill">{{value.text}}</a>
       {{/eachProperty}}
@@ -472,8 +477,8 @@ skills:
 
       <div class="p-education h-event h-card" itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
         <h3 class="p-title">Msc Computer Science</h3>
-        <p class="p-org"><a class="p-name u-url" itemprop="name"
-            href="http://www.umu.se/">Umeå University</a>,
+        <p class="p-org"><a class="p-name u-url" itemprop="url"
+            href="http://www.umu.se/"><span itemprop="name">Umeå University</span></a>,
            <span class="p-location" itemprop="location">Umeå</span></p>
         <p><time class="dt-start" datetime="1996-08">August 1996</time> –
            <time class="dt-end" datetime="2001-05">May 2001</time></p>
@@ -485,8 +490,8 @@ skills:
 
       <div class="p-education h-event h-card" itemProp="alumniOf" itemtype="http://schema.org/HighSchool">
         <h3 class="p-title">Natural Sciences</h3>
-        <p class="p-org"><a class="p-name u-url" itemprop="name"
-            href="http://www.nola.ornskoldsvik.se/">Nolaskolan Upper Secondary School</a>,
+        <p class="p-org"><a class="p-name u-url" itemprop="url"
+            href="http://www.ornskoldsvik.se/gymnasium/"><span itemprop="name">Nolaskolan Upper Secondary School</span></a>,
            <span class="p-location" itemprop="location">Örnsköldsvik</span></p>
         <p><time class="dt-start" datetime="1992-08">August 1992</time> –
            <time class="dt-end" datetime="1995-06">June 1995</time></p>

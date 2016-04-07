@@ -92,10 +92,6 @@ gulp.task('pages', function() {
         .pipe(consolidate('handlebars', function (file) {
             var options = {
                 layout: '/layouts/default.hbs',
-                partials: {
-                    back: 'partials/back',
-                    skill: 'partials/skill',
-                },
                 helpers: {
                     eachProperty: function(context, options) {
                         var ret = "";
