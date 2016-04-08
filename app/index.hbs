@@ -196,7 +196,7 @@ skills:
         wiki: Xml
         comp: expert
 ---
-<article itemscope itemtype="http://schema.org/Person" class="h-card">
+<article itemprop="about" itemscope itemtype="http://schema.org/Person" class="h-card">
 <div class="intro wrapper">
   <header>
     <h1><span itemprop="givenName" class="p-given-name">Markus</span>
@@ -291,13 +291,18 @@ skills:
         <h2>Skills</h2>
       </header>
 
-      {{#* inline "skill"}}
-        <a href="http://en.wikipedia.org/wiki/{{wiki}}" class="p-skill">{{text}}</a>
+      {{#* inline "language"}}
+        <span itemprop="itemListElement" itemscope itemtype="https://schema.org/Language">
+          <a href="http://en.wikipedia.org/wiki/{{wiki}}" class="p-skill"
+            itemprop="url"><span itemprop="name">{{text}}</span></a>
+        </span>
       {{/inline}}
 
-      <p>Fluent in {{>skill languages.swedish}} (native) and {{>skill languages.english}}.
-      Understands {{>skill languages.norweigian}} and {{>skill languages.danish}}.
-      Basic skills in {{>skill languages.german}}.
+      <p itemscope itemtype="http://schema.org/ItemList" aria-labelledby="languages-label"><span
+        id="languages-label" class="hidden">Language skills</span>Fluent in
+        {{>language languages.swedish}} (native) and {{>language languages.english}}.
+      Understands {{>language languages.norweigian}} and {{>language languages.danish}}.
+      Basic skills in {{>language languages.german}}.</p>
 
       <div id="skillcloud" itemscope itemtype="http://schema.org/ItemList" aria-labelledby="skillcloud-label">
       <span id="skillcloud-label" class="hidden" itemprop="name">Skillcloud</span>
@@ -475,7 +480,7 @@ skills:
         <h2>Education</h2>
       </header>
 
-      <div class="p-education h-event h-card" itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
+      <div class="p-education h-event h-card" itemprop="alumniOf" itemscope itemtype="http://schema.org/CollegeOrUniversity">
         <h3 class="p-title">Msc Computer Science</h3>
         <p class="p-org"><a class="p-name u-url" itemprop="url"
             href="http://www.umu.se/"><span itemprop="name">Umeå University</span></a>,
@@ -488,7 +493,7 @@ skills:
         </ul>
       </div>
 
-      <div class="p-education h-event h-card" itemProp="alumniOf" itemtype="http://schema.org/HighSchool">
+      <div class="p-education h-event h-card" itemProp="alumniOf" itemscope itemtype="http://schema.org/HighSchool">
         <h3 class="p-title">Natural Sciences</h3>
         <p class="p-org"><a class="p-name u-url" itemprop="url"
             href="http://www.ornskoldsvik.se/gymnasium/"><span itemprop="name">Nolaskolan Upper Secondary School</span></a>,
