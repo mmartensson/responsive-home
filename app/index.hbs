@@ -303,7 +303,7 @@ skills:
       <span id="skillcloud-label" class="hidden" itemprop="name">Skillcloud</span>
       {{#eachProperty skills}}
         <a href="http://en.wikipedia.org/wiki/{{value.wiki}}"
-            data-skill="{{key}}" itemprop="itemListElement"
+            data-skill="{{property}}" itemprop="itemListElement"
             {{#if value.desc}} title="{{value.desc}}" {{/if}}
             class="{{value.comp}} p-skill">{{value.text}}</a>
       {{/eachProperty}}
